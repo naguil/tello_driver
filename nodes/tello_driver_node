@@ -1,4 +1,4 @@
-#!/usr/bin/env python2
+#!/usr/bin/env python3
 import rospy
 from std_msgs.msg import Empty, UInt8, Bool
 from std_msgs.msg import UInt8MultiArray
@@ -82,6 +82,7 @@ class TelloNode(tello.Tello):
         self.local_vid_server_port = int(
             rospy.get_param('~local_vid_server_port', 6038))
         self.tello_ip = rospy.get_param('~tello_ip', '192.168.10.1')
+        self.tello_addr = self.tello_ip; # - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - R E V I S A R - - - -
         self.tello_cmd_server_port = int(
             rospy.get_param('~tello_cmd_server_port', 8889))
         self.connect_timeout_sec = float(
@@ -124,8 +125,10 @@ class TelloNode(tello.Tello):
             self.pub_image_h264 = rospy.Publisher(
                 'image_raw/h264', CompressedImage, queue_size=10)
         else:
+            # self.pub_image_raw = rospy.Publisher(
+            #     'camera/image_raw', Image, queue_size=10)
             self.pub_image_raw = rospy.Publisher(
-                'camera/image_raw', Image, queue_size=10)
+                'image_raw', Image, queue_size=10)
 
         self.sub_takeoff = rospy.Subscriber('takeoff', Empty, self.cb_takeoff)
         self.sub_manual_takeoff = rospy.Subscriber('manual_takeoff', Empty, self.cb_manual_takeoff)
