@@ -13,7 +13,7 @@ Binary release from the ROS repository:
 
 ### Build from source
 * ```$ cd <CATKIN_WS/SRC>```
-* ```$ git clone --recursive https://github.com/appie-17/tello_driver.git```
+* ```$ git clone --recursive https://github.com/naguil/tello_driver.git```
 * ```$ cd ..```
 * ```$ catkin_make```
 * ```$ source devel/setup.bash```
