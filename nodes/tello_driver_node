@@ -8,7 +8,6 @@ from nav_msgs.msg import Odometry
 from dynamic_reconfigure.server import Server
 from tello_driver.msg import TelloStatus
 from tello_driver.cfg import TelloConfig
-import cv2
 from cv_bridge import CvBridge, CvBridgeError
 
 import math
