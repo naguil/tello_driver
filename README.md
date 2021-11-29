@@ -13,7 +13,7 @@ Binary release from the ROS repository:
 
 ### Build from source
 * ```$ cd <CATKIN_WS/SRC>```
-* ```$ git clone --recursive https://github.com/appie-17/tello_driver.git```
+* ```$ git clone --recursive https://github.com/naguil/tello_driver.git```
 * ```$ cd ..```
 * ```$ catkin_make```
 * ```$ source devel/setup.bash```
@@ -119,8 +119,11 @@ None
    ```$ sudo add-apt-repository ppa:jonathonf/ffmpeg-3```  
    ```$ sudo apt update && sudo apt install ffmpeg```  
 
+* **Error while installing codec_image_transport**
+   If there is an error while installing dep on ffmpeg of codec_image_transport (happened on an odroid n2 with ubuntu mate 20.04), run:
+   ```$ sudo apt-get -o Dpkg::Options::="--force-overwrite" install ffmpeg``` 
+   
 # 5. Work-in-progress
 
 # 6. License
-
 
