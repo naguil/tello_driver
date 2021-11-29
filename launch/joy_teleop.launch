@@ -1,7 +1,7 @@
 <?xml version="1.0" ?>
 <launch>
   <arg name="joy_dev" default="/dev/input/js0" />
-  <arg name="namespace" default="tello" />
+  <arg name="namespace" default="tello1" />
 
   <node pkg="joy" type="joy_node" name="joy_node">
     <param name="dev" value="$(arg joy_dev)" />
