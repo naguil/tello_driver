@@ -91,11 +91,11 @@ class GamepadState:
         err = None
         try:
             return self.parse_ps3_usb(msg)
-        except ValueError, e:
+        except ValueError as e:
             err = e
         try:
             return self.parse_ps3_usb2(msg)
-        except ValueError, e:
+        except ValueError as e:
             err = e
         raise err
 
